@@ -1,6 +1,11 @@
 #include "hello.h"
+#include <stdlib.h>
+char* myStrcat(char *dest, const char *src);
 
 int main() {
+    char *c=(char*)malloc(50);
+    char *m=(char*)malloc(50);
+
     printf("hello world\n");
 }
 
@@ -13,16 +18,16 @@ size_t myStrlen(const char *string) {
 }
 
 char *myStrcat(char *dest, const char *src) {
-    char *re=c;
-    while(*c!='\0')
+    char *re=dest;
+    while(*dest!='\0')
       {
-        c++;
+        dest++;
       }
-      while(*m!='\0')
+      while(*src!='\0')
       {
-        *c++ = *m++;
+        *dest++ = *src++;
       }
-      *c='\0';
+      *dest='\0';
 
       return re;
 }
