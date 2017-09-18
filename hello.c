@@ -2,6 +2,18 @@
 
 int main() {
     printf("hello world\n");
+
+    if (myStrcmp("b", "a") == 0) {
+        printf("%c compare %c = %s\n", 'b', 'a', "equal");
+    } else {
+        printf("%c compare %c = %s\n", 'b', 'a', "difference");
+    }
+
+    if (myStrcmp("a", "a") == 0) {
+        printf("%c compare %c = %s\n", 'a', 'a', "equal");
+    } else {
+        printf("%c compare %c = %s\n", 'a', 'a', "difference");
+    }
 }
 
 char *myStrcpy(char *dest, const char *src) {
@@ -17,5 +29,13 @@ char *myStrcat(char *dest, const char *src) {
 }
 
 int myStrcmp(const char *string1, const char *string2) {
-    return 0;
+    for (int i = 0; ; i++) {
+        if (string1[i] != string2[i]) {
+            return string1[i] < string2[i] ? -1 : 1;
+        }
+
+        if (string1[i] == '\0') {
+            return 0;
+        }
+    }
 }
