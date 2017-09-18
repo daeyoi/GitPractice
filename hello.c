@@ -13,7 +13,18 @@ size_t myStrlen(const char *string) {
 }
 
 char *myStrcat(char *dest, const char *src) {
-    return NULL;
+    char *re=c;
+    while(*c!='\0')
+      {
+        c++;
+      }
+      while(*m!='\0')
+      {
+        *c++ = *m++;
+      }
+      *c='\0';
+
+      return re;
 }
 
 int myStrcmp(const char *string1, const char *string2) {
