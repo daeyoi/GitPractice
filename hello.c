@@ -3,9 +3,6 @@
 char* myStrcat(char *dest, const char *src);
 
 int main() {
-    char *c=(char*)malloc(50);
-    char *m=(char*)malloc(50);
-
     printf("hello world\n");
 }
 
