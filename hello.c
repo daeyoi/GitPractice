@@ -1,4 +1,6 @@
 #include "hello.h"
+#include <stdlib.h>
+char* myStrcat(char *dest, const char *src);
 
 int main() {
     printf("hello world\n");
@@ -25,7 +27,18 @@ size_t myStrlen(const char *string) {
 }
 
 char *myStrcat(char *dest, const char *src) {
-    return NULL;
+    char *re=dest;
+    while(*dest!='\0')
+      {
+        dest++;
+      }
+      while(*src!='\0')
+      {
+        *dest++ = *src++;
+      }
+      *dest='\0';
+
+      return re;
 }
 
 int myStrcmp(const char *string1, const char *string2) {
